@@ -84,7 +84,7 @@ namespace Authentiqr.Core
 
             // Dynamically truncate the hash
             // OffsetBits are the low order bits of the last byte of the hash
-            var offset = hash[^1] & 0xF;
+            var offset = hash[hash.Length-1] & 0xF;
             // Grab a positive integer value starting at the given offset.
             var result = HashToInt(hash, offset);
             var truncatedHash = result & 0x7FFFFFFF;

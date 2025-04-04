@@ -1,10 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Authors>Richard Green</Authors>
+    <TargetFramework>net481</TargetFramework>
+    <LangVersion>latest</LangVersion>
+
+    <Authors>Richard Green &amp; Ting Yi</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/richard-green/Authentiqr.NET</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/CarefulDeveloper/Authentiqr.NET</PackageProjectUrl>
     <Description>Library for Generating and Validating one-time-password codes, for e.g. Google Authenticator</Description>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Version>1.0.0</Version>

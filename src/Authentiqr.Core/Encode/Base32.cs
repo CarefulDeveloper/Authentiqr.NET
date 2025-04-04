@@ -171,7 +171,7 @@ namespace Authentiqr.Core.Encode
                 {
                     if (!_index.TryGetValue(input.Substring(i + charOffset, 1), out uint cbyte))
                     {
-                        throw new ArgumentException(string.Concat("Invalid character '", input.AsSpan(i + charOffset, 1), "' in base32 string, valid characters are: ", _alphabet));
+                        throw new ArgumentException(string.Concat("Invalid character '", input[i+charOffset], "' in base32 string, valid characters are: ", _alphabet));
                     }
 
                     val |= ((ulong)cbyte) << (((bytes + 1) * 8) - (charOffset * 5) - 5);

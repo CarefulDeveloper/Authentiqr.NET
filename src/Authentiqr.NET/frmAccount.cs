@@ -11,7 +11,6 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Windows.Forms;
 using ZXing;
-using ZXing.Windows.Compatibility;
 
 namespace Authentiqr.NET
 {
@@ -338,7 +337,7 @@ namespace Authentiqr.NET
                 var queryString = HttpUtility.ParseQueryString(uri.Query);
                 var secret = queryString["secret"];
                 var issuer = queryString["issuer"];
-                var account = uri.LocalPath.StartsWith("/") ? uri.LocalPath[1..] : uri.LocalPath;
+                var account = uri.LocalPath.StartsWith("/") ? uri.LocalPath.Substring(1) : uri.LocalPath;
                 var accountName = HttpUtility.UrlDecode(account);
 
                 if (accountName.Contains(':'))
